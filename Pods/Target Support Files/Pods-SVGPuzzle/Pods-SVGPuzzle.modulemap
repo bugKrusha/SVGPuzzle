@@ -1,0 +1,6 @@
+framework module Pods_SVGPuzzle {
+  umbrella header "Pods-SVGPuzzle-umbrella.h"
+
+  export *
+  module * { export * }
+}
