@@ -13,6 +13,7 @@
 		1B38CF231FA19EAD000B43E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B38CF211FA19EAD000B43E9 /* LaunchScreen.storyboard */; };
 		1B38CF2E1FA19EAD000B43E9 /* SVGPuzzleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38CF2D1FA19EAD000B43E9 /* SVGPuzzleTests.swift */; };
 		1B38CF391FA19EAD000B43E9 /* SVGPuzzleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38CF381FA19EAD000B43E9 /* SVGPuzzleUITests.swift */; };
+		1BB246E81FA5571400A679CF /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB246E71FA5571400A679CF /* GDataXMLNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,9 @@
 		1B38CF341FA19EAD000B43E9 /* SVGPuzzleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SVGPuzzleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B38CF381FA19EAD000B43E9 /* SVGPuzzleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGPuzzleUITests.swift; sourceTree = "<group>"; };
 		1B38CF3A1FA19EAD000B43E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BB246E11FA5527200A679CF /* SVGPuzzle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SVGPuzzle-Bridging-Header.h"; sourceTree = "<group>"; };
+		1BB246E61FA5571400A679CF /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = GDataXMLDocument/GDataXMLNode.h; sourceTree = "<group>"; };
+		1BB246E71FA5571400A679CF /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = GDataXMLDocument/GDataXMLNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +99,13 @@
 		1B38CF171FA19EAD000B43E9 /* SVGPuzzle */ = {
 			isa = PBXGroup;
 			children = (
+				1BB246E51FA5527800A679CF /* GDataXMLDocument */,
 				1B38CF181FA19EAD000B43E9 /* AppDelegate.swift */,
 				1B38CF1C1FA19EAD000B43E9 /* Main.storyboard */,
 				1B38CF1F1FA19EAD000B43E9 /* Assets.xcassets */,
 				1B38CF211FA19EAD000B43E9 /* LaunchScreen.storyboard */,
 				1B38CF241FA19EAD000B43E9 /* Info.plist */,
+				1BB246E11FA5527200A679CF /* SVGPuzzle-Bridging-Header.h */,
 			);
 			path = SVGPuzzle;
 			sourceTree = "<group>";
@@ -120,6 +126,15 @@
 				1B38CF3A1FA19EAD000B43E9 /* Info.plist */,
 			);
 			path = SVGPuzzleUITests;
+			sourceTree = "<group>";
+		};
+		1BB246E51FA5527800A679CF /* GDataXMLDocument */ = {
+			isa = PBXGroup;
+			children = (
+				1BB246E61FA5571400A679CF /* GDataXMLNode.h */,
+				1BB246E71FA5571400A679CF /* GDataXMLNode.m */,
+			);
+			name = GDataXMLDocument;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +206,7 @@
 					1B38CF141FA19EAD000B43E9 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 8767555EYT;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					1B38CF281FA19EAD000B43E9 = {
@@ -260,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B38CF191FA19EAD000B43E9 /* AppDelegate.swift in Sources */,
+				1BB246E81FA5571400A679CF /* GDataXMLNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,9 +372,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = " /usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -400,8 +419,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = " /usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -413,11 +434,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8767555EYT;
 				INFOPLIST_FILE = SVGPuzzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugkrusha.SVGPuzzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SVGPuzzle/SVGPuzzle-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,11 +450,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8767555EYT;
 				INFOPLIST_FILE = SVGPuzzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugkrusha.SVGPuzzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SVGPuzzle/SVGPuzzle-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -512,6 +538,7 @@
 				1B38CF3F1FA19EAD000B43E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B38CF401FA19EAD000B43E9 /* Build configuration list for PBXNativeTarget "SVGPuzzleTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +547,7 @@
 				1B38CF421FA19EAD000B43E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B38CF431FA19EAD000B43E9 /* Build configuration list for PBXNativeTarget "SVGPuzzleUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +556,7 @@
 				1B38CF451FA19EAD000B43E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
