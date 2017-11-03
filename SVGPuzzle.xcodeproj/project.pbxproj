@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B387EC51FAC28F600CFEA10 /* SVGDocumentManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC41FAC28F600CFEA10 /* SVGDocumentManger.swift */; };
+		1B387EC71FAC331400CFEA10 /* PuzzlePiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC61FAC331400CFEA10 /* PuzzlePiece.swift */; };
+		1B387ECA1FAC336700CFEA10 /* SVGProcessingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC91FAC336700CFEA10 /* SVGProcessingError.swift */; };
+		1B387ECD1FAC339700CFEA10 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387ECC1FAC339700CFEA10 /* Attributes.swift */; };
 		1B38CF191FA19EAD000B43E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38CF181FA19EAD000B43E9 /* AppDelegate.swift */; };
 		1B38CF1E1FA19EAD000B43E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B38CF1C1FA19EAD000B43E9 /* Main.storyboard */; };
 		1B38CF201FA19EAD000B43E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B38CF1F1FA19EAD000B43E9 /* Assets.xcassets */; };
@@ -40,6 +44,10 @@
 
 /* Begin PBXFileReference section */
 		12161F06A1CDE1D0017184A2 /* Pods_SVGPuzzleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SVGPuzzleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B387EC41FAC28F600CFEA10 /* SVGDocumentManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGDocumentManger.swift; path = Utilities/SVGDocumentManger.swift; sourceTree = "<group>"; };
+		1B387EC61FAC331400CFEA10 /* PuzzlePiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PuzzlePiece.swift; path = Model/PuzzlePiece.swift; sourceTree = "<group>"; };
+		1B387EC91FAC336700CFEA10 /* SVGProcessingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGProcessingError.swift; path = Helpers/SVGProcessingError.swift; sourceTree = "<group>"; };
+		1B387ECC1FAC339700CFEA10 /* Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Attributes.swift; path = Helpers/Attributes.swift; sourceTree = "<group>"; };
 		1B38CF151FA19EAD000B43E9 /* SVGPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVGPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B38CF181FA19EAD000B43E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B38CF1D1FA19EAD000B43E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +103,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B387EC81FAC331C00CFEA10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B387EC61FAC331400CFEA10 /* PuzzlePiece.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1B387ECB1FAC336D00CFEA10 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1B387EC91FAC336700CFEA10 /* SVGProcessingError.swift */,
+				1B387ECC1FAC339700CFEA10 /* Attributes.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		1B38CF0C1FA19EAD000B43E9 = {
 			isa = PBXGroup;
 			children = (
@@ -120,8 +145,10 @@
 		1B38CF171FA19EAD000B43E9 /* SVGPuzzle */ = {
 			isa = PBXGroup;
 			children = (
-				1BB246E51FA5527800A679CF /* GDataXMLDocument */,
 				1B38CF181FA19EAD000B43E9 /* AppDelegate.swift */,
+				1B387ECB1FAC336D00CFEA10 /* Helpers */,
+				1B387EC81FAC331C00CFEA10 /* Model */,
+				1BB246E51FA5527800A679CF /* GDataXMLDocument */,
 				1B66A6911FAA276F002E1ECD /* Utilities */,
 				1B38CF1C1FA19EAD000B43E9 /* Main.storyboard */,
 				1B38CF1F1FA19EAD000B43E9 /* Assets.xcassets */,
@@ -155,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				1B66A68F1FAA2733002E1ECD /* ShapeTransformationManager.swift */,
+				1B387EC41FAC28F600CFEA10 /* SVGDocumentManger.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -490,8 +518,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B66A6901FAA2733002E1ECD /* ShapeTransformationManager.swift in Sources */,
+				1B387EC71FAC331400CFEA10 /* PuzzlePiece.swift in Sources */,
+				1B387ECA1FAC336700CFEA10 /* SVGProcessingError.swift in Sources */,
 				1B38CF191FA19EAD000B43E9 /* AppDelegate.swift in Sources */,
 				1BB246E81FA5571400A679CF /* GDataXMLNode.m in Sources */,
+				1B387EC51FAC28F600CFEA10 /* SVGDocumentManger.swift in Sources */,
+				1B387ECD1FAC339700CFEA10 /* Attributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
