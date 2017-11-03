@@ -13,6 +13,8 @@
 		1B38CF231FA19EAD000B43E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B38CF211FA19EAD000B43E9 /* LaunchScreen.storyboard */; };
 		1B38CF2E1FA19EAD000B43E9 /* SVGPuzzleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38CF2D1FA19EAD000B43E9 /* SVGPuzzleTests.swift */; };
 		1B38CF391FA19EAD000B43E9 /* SVGPuzzleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38CF381FA19EAD000B43E9 /* SVGPuzzleUITests.swift */; };
+		1B66A6901FAA2733002E1ECD /* ShapeTransformationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B66A68F1FAA2733002E1ECD /* ShapeTransformationManager.swift */; };
+		1B66A6971FAC1E71002E1ECD /* math-puzzle-4.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1B66A6961FAC1E71002E1ECD /* math-puzzle-4.svg */; };
 		1BB246E81FA5571400A679CF /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB246E71FA5571400A679CF /* GDataXMLNode.m */; };
 		742F8F497A5F86D90F0F495A /* Pods_SVGPuzzleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759F113D47B4BB03ECBE395F /* Pods_SVGPuzzleTests.framework */; };
 		7DDAD9038C3C9A7C9BB7CAFF /* Pods_SVGPuzzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C54A398E186F54C6B2EA498 /* Pods_SVGPuzzle.framework */; };
@@ -50,6 +52,8 @@
 		1B38CF341FA19EAD000B43E9 /* SVGPuzzleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SVGPuzzleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B38CF381FA19EAD000B43E9 /* SVGPuzzleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGPuzzleUITests.swift; sourceTree = "<group>"; };
 		1B38CF3A1FA19EAD000B43E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B66A68F1FAA2733002E1ECD /* ShapeTransformationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShapeTransformationManager.swift; path = Utilities/ShapeTransformationManager.swift; sourceTree = "<group>"; };
+		1B66A6961FAC1E71002E1ECD /* math-puzzle-4.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "math-puzzle-4.svg"; sourceTree = "<group>"; };
 		1BB246E11FA5527200A679CF /* SVGPuzzle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SVGPuzzle-Bridging-Header.h"; sourceTree = "<group>"; };
 		1BB246E61FA5571400A679CF /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = GDataXMLDocument/GDataXMLNode.h; sourceTree = "<group>"; };
 		1BB246E71FA5571400A679CF /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = GDataXMLDocument/GDataXMLNode.m; sourceTree = "<group>"; };
@@ -118,10 +122,12 @@
 			children = (
 				1BB246E51FA5527800A679CF /* GDataXMLDocument */,
 				1B38CF181FA19EAD000B43E9 /* AppDelegate.swift */,
+				1B66A6911FAA276F002E1ECD /* Utilities */,
 				1B38CF1C1FA19EAD000B43E9 /* Main.storyboard */,
 				1B38CF1F1FA19EAD000B43E9 /* Assets.xcassets */,
 				1B38CF211FA19EAD000B43E9 /* LaunchScreen.storyboard */,
 				1B38CF241FA19EAD000B43E9 /* Info.plist */,
+				1B66A6961FAC1E71002E1ECD /* math-puzzle-4.svg */,
 				1BB246E11FA5527200A679CF /* SVGPuzzle-Bridging-Header.h */,
 			);
 			path = SVGPuzzle;
@@ -143,6 +149,14 @@
 				1B38CF3A1FA19EAD000B43E9 /* Info.plist */,
 			);
 			path = SVGPuzzleUITests;
+			sourceTree = "<group>";
+		};
+		1B66A6911FAA276F002E1ECD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1B66A68F1FAA2733002E1ECD /* ShapeTransformationManager.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		1BB246E51FA5527800A679CF /* GDataXMLDocument */ = {
@@ -298,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B38CF231FA19EAD000B43E9 /* LaunchScreen.storyboard in Resources */,
+				1B66A6971FAC1E71002E1ECD /* math-puzzle-4.svg in Resources */,
 				1B38CF201FA19EAD000B43E9 /* Assets.xcassets in Resources */,
 				1B38CF1E1FA19EAD000B43E9 /* Main.storyboard in Resources */,
 			);
@@ -474,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B66A6901FAA2733002E1ECD /* ShapeTransformationManager.swift in Sources */,
 				1B38CF191FA19EAD000B43E9 /* AppDelegate.swift in Sources */,
 				1BB246E81FA5571400A679CF /* GDataXMLNode.m in Sources */,
 			);
