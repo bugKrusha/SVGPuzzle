@@ -16,6 +16,11 @@ enum TransformType {
 
 class ShapeTransformationManager {
     private var transform = CGAffineTransform.identity
+    let _class: String
+    
+    init(_class: String) {
+        self._class = _class
+    }
     
     /// A transformation attribute as required by the svg spec.
     var matrixAttribute: String {

@@ -10,10 +10,15 @@ import Foundation
 import SwiftSVG
 
 class SVGDocumentManager {
-    let document: GDataXMLDocument
+    private let document: GDataXMLDocument
     private var pathElements: [GDataXMLElement] = []
     
-    init(data: Data) throws {
+    init(resource: String = "math-puzzle-4") throws {
+        guard
+            let svgUrl = Bundle.main.url(forResource: resource, withExtension: "svg")
+            else { throw SVGProcessingError.resourceNotFound }
+        
+        let data = try Data(contentsOf: svgUrl, options: .dataReadingMapped)
         document = try GDataXMLDocument(data: data, options: 0)
         extractPathElements()
     }
