@@ -10,13 +10,21 @@ import Foundation
 import SwiftSVG
 
 class PuzzlePiece {
+    private let path: UIBezierPath
     let dPath: String
     let _class: String
     let shapeLayer: CAShapeLayer
     
+    var frame: CGRect {
+        return path.bounds
+    }
+    
     init(dPath: String, _class: String) {
         self.dPath = dPath
         self._class = _class
-        self.shapeLayer = CAShapeLayer(pathString: dPath)
+        self.path = UIBezierPath(pathString: dPath)
+        self.shapeLayer = CAShapeLayer()
+        shapeLayer.path = path.cgPath
+        shapeLayer.backgroundColor = UIColor.blue.cgColor
     }
 }

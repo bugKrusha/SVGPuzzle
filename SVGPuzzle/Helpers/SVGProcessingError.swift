@@ -11,4 +11,5 @@ import Foundation
 enum SVGProcessingError: Error {
     case attribute
     case brokenFile
+    case resourceNotFound
 }

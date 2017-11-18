@@ -17,6 +17,11 @@
 		1B38CF231FA19EAD000B43E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B38CF211FA19EAD000B43E9 /* LaunchScreen.storyboard */; };
 		1B38CF2E1FA19EAD000B43E9 /* SVGPuzzleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38CF2D1FA19EAD000B43E9 /* SVGPuzzleTests.swift */; };
 		1B38CF391FA19EAD000B43E9 /* SVGPuzzleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38CF381FA19EAD000B43E9 /* SVGPuzzleUITests.swift */; };
+		1B4242B21FAE46ED00779419 /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4242B11FAE46ED00779419 /* PuzzleViewController.swift */; };
+		1B4242B51FAE4A7E00779419 /* PuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4242B41FAE4A7E00779419 /* PuzzleView.swift */; };
+		1B4242B81FAE4AE100779419 /* PuzzleViewControllerPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4242B71FAE4AE100779419 /* PuzzleViewControllerPresentationModel.swift */; };
+		1B4242BA1FAEB2FC00779419 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4242B91FAEB2FC00779419 /* Constants.swift */; };
+		1B4242BC1FAEBEDE00779419 /* TransformationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4242BB1FAEBEDE00779419 /* TransformationUtility.swift */; };
 		1B66A6901FAA2733002E1ECD /* ShapeTransformationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B66A68F1FAA2733002E1ECD /* ShapeTransformationManager.swift */; };
 		1B66A6971FAC1E71002E1ECD /* math-puzzle-4.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1B66A6961FAC1E71002E1ECD /* math-puzzle-4.svg */; };
 		1BB246E81FA5571400A679CF /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB246E71FA5571400A679CF /* GDataXMLNode.m */; };
@@ -60,6 +65,11 @@
 		1B38CF341FA19EAD000B43E9 /* SVGPuzzleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SVGPuzzleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B38CF381FA19EAD000B43E9 /* SVGPuzzleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGPuzzleUITests.swift; sourceTree = "<group>"; };
 		1B38CF3A1FA19EAD000B43E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B4242B11FAE46ED00779419 /* PuzzleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PuzzleViewController.swift; path = ViewControllers/PuzzleViewController.swift; sourceTree = "<group>"; };
+		1B4242B41FAE4A7E00779419 /* PuzzleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PuzzleView.swift; path = Views/PuzzleView.swift; sourceTree = "<group>"; };
+		1B4242B71FAE4AE100779419 /* PuzzleViewControllerPresentationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PuzzleViewControllerPresentationModel.swift; path = ViewControllers/PuzzleViewControllerPresentationModel.swift; sourceTree = "<group>"; };
+		1B4242B91FAEB2FC00779419 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Helpers/Constants.swift; sourceTree = "<group>"; };
+		1B4242BB1FAEBEDE00779419 /* TransformationUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransformationUtility.swift; path = Utilities/TransformationUtility.swift; sourceTree = "<group>"; };
 		1B66A68F1FAA2733002E1ECD /* ShapeTransformationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShapeTransformationManager.swift; path = Utilities/ShapeTransformationManager.swift; sourceTree = "<group>"; };
 		1B66A6961FAC1E71002E1ECD /* math-puzzle-4.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "math-puzzle-4.svg"; sourceTree = "<group>"; };
 		1BB246E11FA5527200A679CF /* SVGPuzzle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SVGPuzzle-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -115,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				1B387EC91FAC336700CFEA10 /* SVGProcessingError.swift */,
+				1B4242B91FAEB2FC00779419 /* Constants.swift */,
 				1B387ECC1FAC339700CFEA10 /* Attributes.swift */,
 			);
 			name = Helpers;
@@ -146,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				1B38CF181FA19EAD000B43E9 /* AppDelegate.swift */,
+				1B4242B61FAE4AAE00779419 /* Views */,
+				1B4242B31FAE4A5200779419 /* ViewControllers */,
 				1B387ECB1FAC336D00CFEA10 /* Helpers */,
 				1B387EC81FAC331C00CFEA10 /* Model */,
 				1BB246E51FA5527800A679CF /* GDataXMLDocument */,
@@ -178,11 +191,29 @@
 			path = SVGPuzzleUITests;
 			sourceTree = "<group>";
 		};
+		1B4242B31FAE4A5200779419 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1B4242B11FAE46ED00779419 /* PuzzleViewController.swift */,
+				1B4242B71FAE4AE100779419 /* PuzzleViewControllerPresentationModel.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1B4242B61FAE4AAE00779419 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B4242B41FAE4A7E00779419 /* PuzzleView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		1B66A6911FAA276F002E1ECD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				1B66A68F1FAA2733002E1ECD /* ShapeTransformationManager.swift */,
 				1B387EC41FAC28F600CFEA10 /* SVGDocumentManger.swift */,
+				1B4242BB1FAEBEDE00779419 /* TransformationUtility.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -517,12 +548,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B4242B81FAE4AE100779419 /* PuzzleViewControllerPresentationModel.swift in Sources */,
+				1B4242BA1FAEB2FC00779419 /* Constants.swift in Sources */,
 				1B66A6901FAA2733002E1ECD /* ShapeTransformationManager.swift in Sources */,
 				1B387EC71FAC331400CFEA10 /* PuzzlePiece.swift in Sources */,
+				1B4242B51FAE4A7E00779419 /* PuzzleView.swift in Sources */,
+				1B4242BC1FAEBEDE00779419 /* TransformationUtility.swift in Sources */,
 				1B387ECA1FAC336700CFEA10 /* SVGProcessingError.swift in Sources */,
 				1B38CF191FA19EAD000B43E9 /* AppDelegate.swift in Sources */,
 				1BB246E81FA5571400A679CF /* GDataXMLNode.m in Sources */,
 				1B387EC51FAC28F600CFEA10 /* SVGDocumentManger.swift in Sources */,
+				1B4242B21FAE46ED00779419 /* PuzzleViewController.swift in Sources */,
 				1B387ECD1FAC339700CFEA10 /* Attributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
